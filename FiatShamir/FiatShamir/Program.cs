@@ -49,7 +49,7 @@ namespace FiatShamir
                 // Generate a random BigInteger with the specified number of bits
                 prime = new BigInteger(bits, random);
             }
-            while (!prime.IsProbablePrime(50)); // Use a 50-round Miller-Rabin test for primality
+            while (!prime.IsProbablePrime(10)); // Use a 10-round Miller-Rabin test for primality
 
             return prime;
         }
